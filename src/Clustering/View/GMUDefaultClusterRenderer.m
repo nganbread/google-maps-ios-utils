@@ -179,7 +179,11 @@ static const double kGMUAnimationDuration = 0.5;  // seconds.
 }
 
 - (void)updateClusterIcons {
-  for (GMSMarker *marker in _markers){
+  [self updateMarkers:_markers];  
+}
+
+- (void)updateMarkers:(NSArray<GMSMarker *> *)markers {
+  for (GMSMarker *marker in markers) {
     UIImage *icon = [_clusterIconGenerator iconForCluster:marker.userData];
     marker.icon = icon;
   }
