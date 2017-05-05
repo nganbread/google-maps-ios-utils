@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 // For example new clusters may become visible and need to be shown on map.
 - (void)update;
 
+- (void)updateClusterIcons;
+
 @end
 
 NS_ASSUME_NONNULL_END
